@@ -8,19 +8,18 @@ import scipy
 import csv
 from sklearn.feature_extraction.text import CountVectorizer
 
-path = 'files/*.json'
+path = '../Malware_Project/TG_Json_Data/*.json'
+#path = 'files/*.json'
 size = len(glob.glob(path))
 feature_list = []
-bi_list =[]
-dll_list=[]
-import_list[]
-sha_list[]
+
 output_list = []
 print("Number of files: ", size)
 
 #read all files from path into a dict then iterate over them
+#try:
 for file in glob.glob(path):
-	#open each file in turn and write the data as to the data variable, properly parsed as json
+#open each file in turn and write the data as to the data variable, properly parsed as json
 	with open (file) as data_file:
 		data = json.load(data_file)
 		data_file.close()
@@ -30,20 +29,24 @@ for file in glob.glob(path):
 	feature_list=[]
 	feature_list.append(data["status"]["sha256"])
 	for imp in data["artifacts"]["1"]["forensics"]["imports"]:
-		feature_list.append(imp["dll"])
-		feature_list.append(imp["entries"][0][0])
-	for item in data["iocs"]:
-		feature_list.append(item["title"])
-	#append the sha to the sha_list varible 
-	feature_list.append(data["status"]["sha256"])
+		#feature_list.append(imp["dll"])
+		try:
+			feature_list.append(imp["entries"][0][0])
+		except IndexError: pass
+	#for item in data["iocs"]:
+		#feature_list.append(item["title"])
+	print("Feature List: ", feature_list)
 	output_list.append([feature_list])
+
+#except IndexError: pass
+
 
 #lets print the two lists and see if this works for our sample file set
 #print("feature_list",feature_list)
 
-with open('some.csv', 'w') as f:
+with open('output/imports.csv', 'w') as f:
 	writer = csv.writer(f)
-	for row in feature_list:
-	    writer.writerow(output_list)
+	for row in output_list:
+	    writer.writerow(row)
 
 
