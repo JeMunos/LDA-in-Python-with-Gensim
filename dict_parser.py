@@ -44,7 +44,16 @@ for file in glob.glob(path):
         #build list of all DLL's contained in the dll_dict
         if d['dll'] not in dll_list:
             dll_list.append(str(d['dll']))
-print("dll dict ", dll_dict)
-print("dll_list", dll_list)
+#print("dll dict ", dll_dict)
+#print("dll_list", dll_list)
+first_row = [''] + [[k] + v for k,v in dll_dict.items()]
+first_row = [n for x in first_row for n in x]
 
+
+#ohh god ohh god CSV....fuck
+with open('output/imports.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerow([' '] + first_row)
+    for value in dll_list:
+        
 
