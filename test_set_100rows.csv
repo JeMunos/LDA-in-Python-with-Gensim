@@ -1,0 +1,99 @@
+GetProcAddress,Retrieves the address of an exported function or variable from the specified dynamic-link library DLL).
+GetLastError,Retrieves the calling thread's last-error code value. The last-error code is maintained on a per-thread basis. Multiple threads do not overwrite each other's last-error code.
+CloseHandle,Closes an open object handle.
+GetModuleHandleA,Retrieves a module handle for the specified module. The module must have been loaded by the calling process.
+GetCurrentProcess,Retrieves a pseudo handle for the current process.
+ExitProcess,Ends the calling process and all its threads.
+LoadLibraryA,Loads the specified  module into the address space of the calling process. The specified     module may cause other modules to be loaded.
+WriteFile,Writes data to the specified file or input/output I/O) device.
+GetTickCount,"Retrieves the number of milliseconds that have elapsed since the system was started, up to 49.7 days."
+RegCloseKey,Closes a handle to the specified registry key.
+MultiByteToWideChar,Maps a character string to a UTF-16 wide character) string. The character string is not necessarily from a multibyte character set.
+GetCurrentThreadId,Retrieves the thread identifier of the calling thread.
+FreeLibrary,"Frees the loaded dynamic-link library DLL) module and, if necessary, decrements its reference count. When the reference count reaches zero, the module is unloaded from the address space of the calling process and the handle is no longer valid."
+GetCurrentProcessId,Retrieves the process identifier of the calling process.
+GetModuleFileNameA,Retrieves the fully qualified path for the file that contains the specified module. The module must have been loaded by the current process.
+TerminateProcess,Terminates the specified process and all of its threads.
+WaitForSingleObject,Waits until the specified object is in the signaled state or the time-out interval elapses.
+ReadFile,Reads data from the specified file or input/output I/O) device. Reads occur at the position specified     by the file pointer if supported by the device.
+WideCharToMultiByte,Maps a UTF-16 wide character) string to a new character string. The new character string is not necessarily from a multibyte character set.        
+FindClose,"Closes a file search handle opened by the     FindFirstFile,     FindFirstFileEx,     FindFirstFileNameW,     FindFirstFileNameTransactedW,     FindFirstFileTransacted,     FindFirstStreamTransactedW, or     FindFirstStreamW functions."
+UnhandledExceptionFilter,"An application-defined function that passes unhandled exceptions to the debugger, if the process is being debugged. Otherwise, it optionally displays an Application Error message box and causes the exception handler to be executed. This function can be called only from within the filter expression of an exception handler."
+SetUnhandledExceptionFilter,Enables an application to supersede the top-level exception handler of each thread of a process.
+CreateThread,Creates a thread to execute within the virtual address space of the calling process.
+QueryPerformanceCounter,"Retrieves the current value of the performance counter, which is a high resolution <1us) time stamp that can be used for time-interval measurements."
+CreateFileA,"Creates or opens a file or I/O device. The most commonly used I/O devices are as follows: file, file     stream, directory, physical disk, volume, console buffer, tape drive, communications resource, mailslot, and     pipe. The function returns a handle that can be used to access the file or device for various types of     I/O depending on the file or device and the flags and attributes specified."
+SetFilePointer,Moves the file pointer of the specified file.
+GetCommandLineA,Retrieves the command-line string for the current process.
+GetSystemTimeAsFileTime,Retrieves the current system date and time. The information is in Coordinated Universal Time UTC) format.
+SetLastError,Sets the last-error code for the calling thread.
+HeapAlloc,Allocates a block of memory from a heap. The allocated memory is not movable.
+RegQueryValueExA,Retrieves the type and data for the specified value name associated with an open registry key.
+VirtualAlloc,"Reserves, commits, or changes the state  of a region of pages in the virtual address space of the calling process.     Memory allocated by this function is automatically initialized to zero."
+EnterCriticalSection,Waits for ownership of the specified critical section object. The function returns when the calling thread is granted ownership.
+LeaveCriticalSection,Releases ownership of the specified critical section object.
+HeapFree,Frees a memory block allocated from a heap by the HeapAlloc or HeapReAlloc function.
+DeleteCriticalSection,Releases all resources used by an unowned critical section object.
+DeleteFileA,Deletes an existing file.
+RegOpenKeyExA,Opens the specified registry key. Note that key names are not case sensitive.
+CreateProcessA,Creates a new process and its primary thread. The new process runs in the security context of the calling process.
+GetStdHandle,"Retrieves a handle to the specified standard device standard input, standard output, or standard error)."
+FlushFileBuffers,Flushes the buffers of a specified file and causes all buffered data to be written to a file.
+GetStartupInfoA,Retrieves the contents of the STARTUPINFO structure that was specified when the calling process was created.
+VirtualFree,"Releases, decommits, or releases and decommits a region of pages within the virtual address space of the calling process."
+GetFileSize,"Retrieves the size of the specified file, in bytes."
+OpenProcessToken,The OpenProcessToken function opens the access token associated with a process.
+RtlUnwind,Initiates an unwind of procedure call frames.
+InterlockedDecrement,Decrements decreases by one) the value of the specified 32-bit variable as an atomic operation.
+FindFirstFileA,Searches a directory for a file or subdirectory with a name that matches a specific name or partial     name if wildcards are used).
+GetFileType,Retrieves the file type of the specified file.
+LocalFree,Frees the specified local memory object and invalidates its handle.
+SetEvent,Sets the specified event object to the signaled state.
+GlobalAlloc,Allocates the specified number of bytes from the heap.
+HeapReAlloc,Reallocates a block of memory from a heap. This function enables you to resize a memory block and change other memory block properties. The allocated memory is not movable.
+TlsGetValue,Retrieves the value in the calling thread's thread local storage TLS) slot for the specified TLS index. Each thread of a process has its own slot for each TLS index.
+TlsSetValue,Stores a value in the calling thread's thread local storage TLS) slot for the specified TLS index. Each thread of a process has its own slot for each TLS index.
+GetProcessHeap,Retrieves a handle to the default heap of the calling process. This handle can then be used in subsequent calls to the heap functions.
+FindNextFileA,"Continues a file search from a previous call to the     FindFirstFile,     FindFirstFileEx, or     FindFirstFileTransacted functions."
+InterlockedIncrement,Increments increases by one) the value of the specified 32-bit variable as an atomic operation.
+GetActiveWindow,Retrieves the window handle to the active window attached to the calling thread's message queue.
+GetCPInfo,Retrieves information about any valid installed or available code page.
+RegSetValueExA,Sets the data and type of a specified value under a registry key.
+CreateFileW,"Creates or opens a file or I/O device. The most commonly used I/O devices are as follows: file, file     stream, directory, physical disk, volume, console buffer, tape drive, communications resource, mailslot, and     pipe. The function returns a handle that can be used to access the file or device for various types of     I/O depending on the file or device and the flags and attributes specified."
+GetModuleHandleW,Retrieves a module handle for the specified module. The module must have been loaded by the calling process.
+SetFileAttributesA,Sets the attributes for a file or directory.
+GlobalFree,Frees the specified global memory object and invalidates its handle.
+GetWindowsDirectoryA,Retrieves the     path of the Windows directory.
+GetFileAttributesA,Retrieves file system attributes for a specified file or directory.
+SizeofResource,"Retrieves the size, in bytes, of the specified resource. "
+GetLastActivePopup,Determines which pop-up window owned by the specified window was most recently active.
+InitializeCriticalSection,Initializes a critical section object.
+GetVersion,"With the release of Windows 8.1, the behavior of the GetVersion API has changed in the value it will return for the operating system version. The value returned by the GetVersion function now depends on how the application is manifested. Applications not manifested for Windows 8.1 or Windows 10 will return the Windows 8 OS version value (6.2). Once an application is manifested for a given operating system version, GetVersion will always return the version that the application is manifested for in future releases. To manifest your applications for Windows 8.1 or Windows 10, refer to Targeting your application for Windows."
+LockResource,Retrieves a pointer to the specified resource in memory.
+GetModuleFileNameW,Retrieves the fully qualified path for the file that contains the specified module. The module must have been loaded by the current process.
+SetEndOfFile,Sets the physical file size for the specified file to the current position of the file pointer.
+TlsAlloc,"Allocates a thread local storage TLS) index. Any thread of the process can subsequently use this index to store and retrieve values that are local to the thread, because each thread receives its own slot for the index."
+GetOEMCP,Returns the current original equipment manufacturer OEM) code page identifier for the operating system.
+LCMapStringW,"For a locale specified by identifier, maps one input character string to another using a specified transformation, or generates a sort key for the input string. "
+GetSystemDirectoryA,Retrieves the path of the system directory. The system directory contains system files such as dynamic-link libraries and drivers.
+GetEnvironmentStringsW,Retrieves the environment variables for the current process.
+FreeEnvironmentStringsW,Frees a block of environment strings.
+GetStringTypeW,"Retrieves character type information for the characters in the specified Unicode source string. For each character in the string, the function sets one or more bits in the corresponding 16-bit element of the output array. Each bit identifies a given character type, for example, letter, digit, or neither.      "
+CoCreateInstance,Creates a single uninitialized object of the class associated with a specified CLSID.
+LoadLibraryW,Loads the specified  module into the address space of the calling process. The specified     module may cause other modules to be loaded.
+MessageBoxA,"Displays a modal dialog box that contains a system icon, a set of buttons, and a brief application-specific message, such as status or error information. The message box returns an integer value that indicates which button the user clicked."
+TlsFree,"Releases a thread local storage TLS) index, making it available for reuse."
+CreateDirectoryA,"Creates a new directory. If the underlying file system supports security on files and     directories, the function applies a specified security descriptor to the new directory."
+GetVersionExA,"With the release of Windows 8.1, the behavior of the GetVersionEx API has changed in the value it will return for the operating system version. The value returned by the GetVersionEx function now depends on how the application is manifested. Applications not manifested for Windows 8.1 or Windows 10 will return the Windows 8 OS version value (6.2). Once an application is manifested for a given operating system version, GetVersionEx will always return the version that the application is manifested for in future releases. To manifest your applications for Windows 8.1 or Windows 10, refer to Targeting your application for Windows."
+OpenProcess,Opens an existing local process object.
+ShellExecuteA,Performs an operation on a specified file.
+GetExitCodeProcess,Retrieves the termination status of the specified process.
+RegCreateKeyExA,"Creates the specified registry key. If the key already exists, the function opens it. Note that key names are not case sensitive."
+RaiseException,Raises an exception in the calling thread.
+SetFileTime,"Sets the date and time that the specified file or directory was created, last accessed, or last     modified."
+LocalAlloc,Allocates the specified number of bytes from the heap.
+MessageBoxW,"Displays a modal dialog box that contains a system icon, a set of buttons, and a brief application-specific message, such as status or error information. The message box returns an integer value that indicates which button the user clicked."
+HeapSize,Retrieves the size of a memory block allocated from a heap by the     HeapAlloc or     HeapReAlloc function.
+GetProcessWindowStation,Retrieves a handle to the current window station for the calling process.
+IsDebuggerPresent,Determines whether the calling process is being debugged by a user-mode debugger.
+HeapDestroy,"Destroys the specified heap object. It decommits and releases all the pages of a private heap object, and it invalidates the handle to the heap."
