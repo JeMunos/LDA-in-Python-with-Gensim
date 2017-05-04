@@ -125,8 +125,13 @@ print("getting function headers to append to the output data")
 
 #final_data = format_output_lists(function_names, doc_lda)
 
+print("Writing model to file 200 topics, 5 words per topic")
+with open("model_alpha.csv", "w") as f:
+	writer = csv.writer(f, lineterminator='\n')
+	writer.writerows(model.print_topics(num_topics=200, num_words=5))
+
 print("doc_lda", doc_lda)
-print("Passing data to LDA and Prepping File Output")
-with open(output_filename, "w") as f:
+print("Writing the per row relation to the model")
+with open("per_row_alpha.csv", "w") as f:
 	writer = csv.writer(f, lineterminator='\n')
 	writer.writerows(doc_lda)
